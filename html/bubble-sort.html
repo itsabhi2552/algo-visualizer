@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="random_array()">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+                <li><a href="#">Advanced Algos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+                <svg id="canvas" width="100%" height="100%"></svg>
+            </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div class="code-guide">
+                        <p id="guid"><u>Bubble Sort</u></p>
+                    </div>
+                    <div class="pseudo-code">
+                        <h3 id="line1"><pre>    <u>Bubble Sort</u></pre></h3>
+                        <p><pre id="line2">     for i=0 to N </pre></p>
+                        <p><pre id="line3">         for j=0 to N-i-1</pre></p>
+                        <p><pre id="line4">             if(Array[j]>Array[j+1])</pre></p>
+                        <p><pre id="line5">                 swap(Array[j],Array[j+1])</pre></p>
+                        <p><pre id="line6">             end if</pre></p>
+                        <p><pre id="line7">         end for</pre></p>
+                        <p><pre id="line8">     end for</pre></p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box1">
+                        <label>Array :&nbsp;</label>
+                        <input class="inp" type="text" id="user-arr" size="40" placeholder="Comma Seperated Maximum 12 Elements.">
+                        <button class="btn" onclick="clear_canvas(), user_array()">Create</button>
+                        <button class="btn" onclick="clear_canvas(), random_array()">Random Array</button>
+                    </div>
+                    <div class="box2">
+                        <label>Speed :&nbsp;</label>
+                        <input id="speed-bar" type="range" min="0" max="1000">
+                        <button class="btn" onclick="bubble_sort();">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+91123-456-7890</li>
+            <li>+91901-222-3333</li>
+            <li>abcd@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+
+    <script src="../js/Bubble-sort.js"></script>
+</body>
+
+</html>

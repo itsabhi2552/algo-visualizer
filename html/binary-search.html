@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="random()">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+                <li><a href="#">Advanced Algos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+
+                <svg id="canvas" width="100%" height="100%">
+                  
+
+        
+                </svg>
+            </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div class="code-guide">
+                        <pre id="code_guide"><u>Binary Search</u></pre>
+                    </div>
+                    <div class="pseudo-code">
+                        <p><u>Pseudo Code</u></p>
+
+                        <pre id="pre1">            while low <= high: </pre>
+                        <pre id="pre2">                       middle = (low+high) // 2</pre>
+                        <pre id="pre3">                       if Target == array[midle]:</pre>
+                          <pre id="pre4">                                return middle</pre>
+                        <pre id="pre5">                       elif Target > array[middle]:</pre>
+                           <pre id="pre6">                               low = middle + 1</pre>
+                        <pre id="pre7">                       else:</pre>
+                            <pre id="pre8">                              high = middle - 1</pre>
+                
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box1">
+                        <label>Array :&nbsp;</label>
+                        <input class="inp" type="text" id="user_array" size="50"
+                            placeholder="Elements must be Sorted (max 10 elements).">
+                        <button class="btn"  id="createbtn" onclick="clear_canvas(),get_array()">Create</button>
+                        <button class="btn" id="generatebtn" onclick="reload(),clear_canvas(),random()">Random Array</button>
+                    </div>
+                    <div class="box2">
+                        <label>Target Value :&nbsp;</label>
+                        <input class="inp" id="user_input" type="text" size="6" id="target" placeholder="Target">
+                        <button class="btn" id="searchbtn" onclick="get_target_value()">Search</button>
+                        <!-- <button class="btn" onclick="">Pause</button> -->
+                        <label>Speed :&nbsp;</label>
+                        <input id="speed" type="range" min=".1" max="1" step=".1" value=".5">
+                        <span id="timeValue"> 0.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+919807515414</li>
+            <li>+917518195414</li>
+            <li>algovisualizer@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+    <script src="../js/Binary_Search.js"></script>
+</body>
+
+</html>

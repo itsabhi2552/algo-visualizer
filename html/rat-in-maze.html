@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rat in the Maze</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="create_maze()">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+                <li><a href="#">Advanced Algos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+                <svg id="canvas" width="100%" height="100%">
+                    <!-- <g>
+                        <defs>
+                            <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                <rect width="80" height="80" fill="url(#smallGrid)" />
+                                <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" />
+                            </pattern>
+                        </defs>
+
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </g> -->
+
+                </svg>
+            </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div class="code-guide">
+                        <p id="guid"><u>Rat in the Maze</u></p>
+                    </div>
+                    <div class="pseudo-code">
+                        <p id="line1">&emsp;<u>Pseudo Code:</u></p>
+                        <p id="line2">&emsp;if currPos is not valid or currPos is a wall</p>
+                        <p id="line3">&emsp;&emsp;return false</p>
+                        <p id="line4">&emsp;if currPos is the goal return true</p>
+                        <p id="line5">&emsp;mark currPos as visited</p>
+                        <p id="line6">&emsp;if nextPos is valid and not visited</p>
+                        <p id="line7">&emsp;&emsp;&emsp;if with nextPos can reach the goal</p>
+                        <p id="line8">&emsp;&emsp;&emsp;&emsp;return true</p>
+                        <p id="line9">&emsp;return false</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box1">
+                        <label>Rows :&nbsp;</label>
+                        <input class="inp" type="text" id="mat-row" size="2" placeholder="max 6" value="6">
+                        <label>&nbsp; Cols :&nbsp;</label>
+                        <input class="inp" type="text" id="mat-col" size="2" placeholder="max 12" value="12">
+                        <button class="btn" id="createbtn" onclick="create_user_defined_maze()">Create</button>
+                        <label>&nbsp; Speed :&nbsp;</label>
+                        <input id="speed" type="range" min=".1" max="1" step=".1" value=".5">
+                        <span id="timeValue"> 0.5</span>
+                        <button class="btn" id="startBtn" onclick="start()">Start</button>
+                        <button class="btn" id="clearBtn" disabled>Clear</button>
+                    </div>
+                    <div class="box2">
+                        <label>Starting Position :&nbsp;</label>
+                        <input class="inp" type="text" id="starting-pos" size="3" placeholder="eg (2,3)" value="0,0">
+                        <button class="btn" id="change_startposbtn" onclick="change_start_pos()">Change Start Pos</button>
+                        <label>&nbsp; Ending Position :&nbsp;</label>
+                        <input class="inp" type="text" id="ending-pos" size="3" placeholder="eg (2,3)" value="5,11">
+                        <button class="btn" id="change_endposbtn" onclick="change_end_pos()">Change End Pos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+919807515414</li>
+            <li>+917518195414</li>
+            <li>algovisualizer@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+
+    <script src="../js/rat-in-maze.js"></script>
+</body>
+
+</html>

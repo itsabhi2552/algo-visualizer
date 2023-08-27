@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Queen Problem</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="createBoard(4)">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+                <svg id="canvas" width="100%" height="100%">
+                </svg>
+            </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div class="code-guide"><p id="guid">N-Queen Problem</p></div>
+                    <div class="pseudo-code">
+                        <p><pre id="line1">    function isSafe(board, row, col, n):</pre></p>
+                        <p><pre id="line2">        for i from 0 to col-1:</pre></p>
+                        <p><pre id="line3">            if board[row][i] == 1:</pre></p>
+                        <p><pre id="line4">                 return false</pre></p>
+                        <p><pre id="line5">            for i,j from row-1, col-1 to 0, 0 by -1:</pre></p>
+                        <p><pre id="line6">                 if board[i][j] == 1:</pre></p>
+                        <p><pre id="line7">                     return false</pre></p>
+                        <p><pre  id="line8">           for i,j from row+1, col-1 to n-1, 0 by 1, -1:</pre></p>
+                        <p><pre  id="line9">                 if board[i][j] == 1:</pre></p>
+                        <p><pre  id="line10">                    return false</pre></p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box2">
+                        <label>Speed :&nbsp;</label>
+                        <input type="range" id="speed-bar"  min="10" max="2000">
+                        <button class="btn" onclick="visualization()">Start</button>
+                        <!-- <button class="btn" onclick="">Pause</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+91123-456-7890</li>
+            <li>+91901-222-3333</li>
+            <li>abcd@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+    <script src="../js/nQueen.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Search</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="random_array(), userRect()">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+                <li><a href="#">Advanced Algos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+                
+            <svg id="bar-container" width="100%" height="100%">
+
+                <g>
+                            <!-- <defs>
+                                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                    <rect width="80" height="80" fill="url(#smallGrid)" />
+                                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" />
+                                </pattern>
+                            </defs> -->
+    
+                            <rect width="100%" height="100%" fill="url(#grid)" />
+                        </g>
+    
+            </svg>
+        </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div class="code-guide">
+                        <p id="guide">Linear Search</p>
+                    </div>
+                    <div class="pseudo-code">
+                        <p id="l0">pseudo-code:</p>
+                        <p id="l1">&emsp;&emsp;function linearSearch(arr, target) {</p>
+                        <p id="l2">&emsp;&emsp;&emsp;for (let i<0; i < arr.length; i++) {</p>
+                        <p id="l3">&emsp;&emsp;&emsp;&emsp;if(arr[i] === target)</p>
+                        <p id="l4">&emsp;&emsp;&emsp;&emsp;&emsp;return i;</p>
+                        <p id="l5">&emsp;&emsp;&emsp;&emsp;}</p>
+                        <p id="l6">&emsp;&emsp;&emsp;&emsp;&emsp;return -1;</p>
+                        <p id="l7">&emsp;&emsp;}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box1">
+                        <label>Array :&nbsp;</label>
+                        <input class="inp" type="text" id="user-arr" size="40" placeholder="Maximum 10 Elements.">
+                        <button id="btnCreate" class="btn" onclick="clearContainer(), user_array()">Create</button>
+                        <button id="btnRandom" class="btn" onclick="clearContainer(), random_array()">Random Array</button>
+                    </div>
+                    <div class="box2">
+                        <label>Target Value :&nbsp;</label>
+                        <input class="inp" type="text" size="3" id="target" placeholder="Target">
+                        <button id="btnSearch" class="btn" onclick="linearSearch()">Search</button>
+                        <!-- <button class="btn" onclick="">Pause</button> -->
+                        <label>Speed :&nbsp;</label>
+                        <input id="speed" type="range" min=".1" max="1" step=".1" value=".5">
+                        <span id="timeValue"> 0.5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+919807515414</li>
+            <li>+917518195414</li>
+            <li>algovisualizer@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+    <script src="../js/linearsearch.js"></script>
+</body>
+
+</html>

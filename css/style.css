@@ -1,0 +1,104 @@
+.box-container {
+    height: 655px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 125px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.animation-space {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.code-snippet {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.code-snippet-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.code-guide {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    width: 380px;
+    height: 75px;
+    /* overflow-y: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background.png);
+    background-position: center;
+    border: 2px solid var(--black);
+    border-radius: 45px;
+    box-shadow: 2px 1px 15px #888888;
+    font-weight: bold;
+}
+
+.pseudo-code {
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    width: 380px;
+    height: 240px;
+    background-image: url(../img/background.png);
+    background-position: center;
+    border-radius: 55px;
+    border: 2px solid var(--black);
+    box-shadow: 2px 1px 15px #888888;
+    font-weight: bold;
+}
+
+.tool-bar {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.tool-bar-container {
+    margin: 0 15px;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url(../img/background.png);
+    background-position: center;
+    border: 2px solid var(--black);
+    border-radius: 60px;
+    box-shadow: 2px 1px 15px #888888;
+}
+
+.tool-bar-container .inp {
+    padding: 1px 10px;
+}
+
+.tool-bar-container .btn {
+    margin: 5px;
+    padding: 1px 15px;
+    background-color: var(--orange);
+    border-radius: 10px;
+}
+
+.tool-bar-container .btn:hover {
+    background-color: var(--border);
+    color: var(--background);
+    box-shadow: 2px 1px 15px #888888;
+}
+
+.preview{
+    font-size: 13px;
+}

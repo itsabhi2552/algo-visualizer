@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractional Knapsack</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body onload="nameRect(),targetText(),startbar()">
+    <header>
+        <div class="logo"><a href="../index.html" class="logo">Algo Visualizer</a></div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Searching</a></li>
+                <li><a href="#">Sorting</a></li>
+                <li><a href="#">Advanced Algos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="box-container">
+            <div class="animation-space">
+                
+            <svg id="bar-container" width="100%" height="100%">
+
+                <g>
+                            <!-- <defs>
+                                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                                    <rect width="80" height="80" fill="url(#smallGrid)" />
+                                    <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1" />
+                                </pattern>
+                            </defs> -->
+    
+                            <rect width="100%" height="100%" fill="url(#grid)" />
+                        </g>
+    
+            </svg>
+        </div>
+            <div class="display"></div>
+            <div class="code-snippet">
+                <div class="code-snippet-container">
+                    <div id="code-guide" style="margin-bottom: 10px;
+                    padding: 10px 20px;
+                    width: 380px;
+                    height: 75px;
+                    justify-content: center;
+                    align-items: center;
+                    background-image: url(../img/background.png);
+                    background-position: center;
+                    border: 2px solid var(--black);
+                    border-radius: 45px;
+                    box-shadow: 2px 1px 15px #888888;
+                    font-weight: bold;">
+                        <p id="guidePW">P/W: </p>
+                        <p id="guideProfit">Profit: </p>
+                        <p id="guideTotalProfit">Total Profit: </p>
+                    </div>
+                    <div class="pseudo-code">
+                        <p id="l-1">pseudo-code:</p>
+                        <p id="l0">&emsp;&emsp;while (bag_weight > 0) {</p>
+                        <p id="l1">&emsp;&emsp;index = find_max_element_index</p>
+                        <p id="l2">&emsp;&emsp;&emsp;if(bag_weight > weight_arr[index]) {</p>
+                        <p id="l3">&emsp;&emsp;&emsp;bag_weight -= weight_arr[index]</p>
+                        <p id="l4">&emsp;&emsp;total_profit += profit_arr[index]</p>
+                        <p id="l5">&emsp;&emsp;&emsp;} else {</p>
+                        <p id="l6">&emsp;&emsp;&emsp;&emsp;&emsp;total_profit += (bag_weight / weight_arr[index]) * profit_arr[index]</p>
+                        <p id="l7">&emsp;&emsp;}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tool-bar">
+                <div class="tool-bar-container">
+                    <div class="box1">
+                        <label>Profit(P) :&nbsp;</label>
+                        <input class="inp" type="text" id="profit-arr" size="23" placeholder="Max values 10 Ex: 1,2,3">
+                        <label>Weight(W) :&nbsp;</label>
+                        <input class="inp" type="text" id="weight-arr" size="23" placeholder="Max values 10 Ex: 1,2,3">
+                        <button class="btn" onclick="getValues(),targetRect()">Get Values</button>
+                    </div>
+                    <div class="box1">
+                        <div class="box1">
+                            <label>Capacity(M) :&nbsp;</label>
+                            <input class="inp" type="text" id="capacity" size="5" placeholder="Capacity.">
+                             <button class="btn" onclick="solveKnapsack()">Solve</button>
+                        
+                        </div>
+                        <!-- <label>Delete :&nbsp;</label>
+                        <button class="btn" onclick="remove()">Delete from end</button>
+                        <button class="btn" onclick="deleteStart()">Delete from start</button>
+                        <button class="btn" onclick="deleteMiddle()">Delete from Middle</button>
+                        <button class="btn" onclick="clearElements()">Clear</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="box1">
+            <h3>Algo Visualizer</h3>
+            <p>Share the website on your social media to help more students.</p>
+        </div>
+
+        <div class="box2">
+            <h3>Contact Info</h3>
+            <li>+919807515414</li>
+            <li>+917518195414</li>
+            <li>algovisualizer@gmail.com</li>
+            <li>Prayagraj, india - 211008</li>
+        </div>
+
+        <div class="box2">
+            <h3>Quick Links</h3>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#searching">Searching</a></li>
+            <li><a href="#sorting">Sorting</a></li>
+        </div>
+    </footer>
+    <script src="../js/greedy-knapsack.js"></script>
+</body>
+
+</html>

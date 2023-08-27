@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: var(--black);
+    color: var(--lightblack);
+    font-size: 15px;
+}
+
+footer h3 {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+footer .box1 {
+    width: 375px;
+    margin: 0 75px;
+}
+
+footer .box1 p {
+    margin-top: 10px;
+}
+
+footer .box2 {
+    margin: 10px 125px;
+}
+
+footer .box2 li {
+    margin-top: 10px;
+    list-style: none;
+}
+
+footer .box2 li a {
+    text-decoration: none;
+    color: var(--lightblack);
+}
+
+footer .box2 li a:hover {
+    color: var(--orange);
+}
